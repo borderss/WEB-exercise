@@ -1,0 +1,39 @@
+html, body {
+    margin: 0px;
+    border: 0px;
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(45deg, #ffffff, #bebebe);
+
+    font-family: 'Noto Sans', sans-serif;
+    color: #4a4a4a;
+}
+
+header {
+    display: flex;
+    height: 50px;
+    background-color: #ffffff;
+}
+
+header > div {
+    height: 100%;
+    padding: 0px 20px 0px 20px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+header > div:hover {
+    background-color: #eeeeee;
+    border-bottom: 2px solid #4a4a4a;
+}
+
+
+header > div.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-right: 5px;
+}
