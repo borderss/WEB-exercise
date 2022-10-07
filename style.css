@@ -1,44 +1,211 @@
-html, body {
-    margin: 0px;
-    border: 0px;
-    min-height: 100%;
+html,
+body {
+  margin: 0px;
+  border: 0px;
+  min-height: 100%;
 }
 
 body {
-    background: linear-gradient(45deg, #ffffff, #d2d2d2);
+  background: #f3f3f3;
 
-    font-family: 'Noto Sans', sans-serif;
-    color: #4a4a4a;
+  height: 4000px;
+
+  font-family: "Noto Sans", sans-serif;
+  color: #4a4a4a;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 header {
-    display: flex;
-    height: 50px;
-    background-color: #ffffff;
+  height: 50px;
+  background-color: #ffffff;
 }
 
-header > div {
-    height: 100%;
-    padding: 0px 20px 0px 20px;
-    line-height: 50px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    transition: border-bottom 0.2s;
+header > .navbar {
+  display: flex;
+  width: 1920px;
+  margin-inline: auto;
+  background-color: #ffffff;
 }
 
-header > div:hover {
-    background-color: #eeeeee;
-    border-bottom: 2px solid #4a4a4a;
+header > .navbar > div {
+  height: 100%;
+  padding: 0px 20px 0px 20px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  transition: box-shadow 0.2s;
 }
 
+header > .navbar > div:not(.logo):hover {
+  background-color: #f5f5f5;
+  color: #3781fd;
+  box-shadow: inset 0px -2px 0 #3781fd;
+}
 
-header > div.logo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
-    margin-right: 5px;
+.logo {
+  width: 140px;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.logo:hover {
+  font-size: 25px;
+  width: 140px;
+  color: #3781fd;
 }
 
 .main {
-    background-color: red;
+  min-width: 850px;
+  max-width: 1800px;
+  width: 88%;
+  margin: 200px auto 0px auto;
+}
 
+.hero {
+  display: flex;
+
+  font-family: Arial, sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 100px;
+}
+
+.title-scroller {
+  position: relative;
+  width: 600px;
+  height: 100px;
+  line-height: 100px;
+
+  margin-left: 15px;
+  overflow: hidden;
+}
+
+.title-scroller > span {
+  position: absolute;
+  top: 0;
+  user-select: none;
+
+  animation: scrolling 10s ease infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    top: -0px;
+  }
+  10% {
+    top: -0px;
+  }
+  25% {
+    top: -100px;
+  }
+  35% {
+    top: -100px;
+  }
+  50% {
+    top: -199px;
+  }
+  60% {
+    top: -199px;
+  }
+  75% {
+    top: -299px;
+  }
+  85% {
+    top: -299px;
+  }
+}
+
+.title-scroller > span > div {
+  display: flex;
+
+  background: linear-gradient(177deg, #46daff, #1221fc);
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+  font-family: Arial, sans-serif;
+  width: 550px;
+  font-size: 25px;
+
+  padding-top: 15px;
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  width: auto;
+  height: 50px;
+
+  margin-top: 30px;
+  gap: 17px;
+}
+
+.action-buttons > button {
+  border: none;
+  background: #3781fd;
+  border-radius: 5px;
+
+  height: 100%;
+  width: 200px;
+
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+
+  color: white;
+
+  transition: box-shadow 0.2s, padding-left 0.2s;
+  cursor: pointer;
+}
+
+.action-buttons > button.learn-more:hover {
+  box-shadow: 0px 2px 10px 0px #3781fd;
+  padding-left: 10px;
+}
+
+.action-buttons > button.contact {
+  position: relative;
+  background: transparent;
+  font-weight: 500;
+  color: #3781fd;
+  transition: 0.2s;
+}
+
+.action-buttons > button.contact:hover::before {
+  filter: drop-shadow(0px 2px 4px #3781fd);
+}
+
+.action-buttons > button.contact:hover {
+  padding-left: 10px;
+}
+
+.action-buttons > button.contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-radius: inherit;
+  border: 2px solid #3781fd;
+
+  transition: 0.2s;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 937px;
+  object-fit: cover;
+  z-index: -1;
 }
