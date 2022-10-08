@@ -29,7 +29,7 @@ body > div {
 }
 
 body::-webkit-scrollbar {
-  width: 6px;
+  width: 0.25vw;
 }
 
 body::-webkit-scrollbar-track {
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: inherit;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: 0.5s;
 }
 
@@ -76,6 +76,18 @@ header > .navbar > div:not(.logo):hover {
   box-shadow: inset 0px -2px 0 #3781fd;
 }
 
+header > .navbar > div.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0px 10px 0px 10px;
+
+  margin-left: auto;
+
+  cursor: pointer;
+}
+
 .logo {
   width: 140px;
 
@@ -85,31 +97,8 @@ header > .navbar > div:not(.logo):hover {
   transition: 0.2s;
 }
 
-header > .navbar > div.info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0px 10px 0px 10px;
-
-  margin-right: 40px;
-  margin-left: auto;
-
-  cursor: pointer;
-}
-
-header > .navbar > div.info > img {
-  width: 30px;
-}
-
-.info:hover > img {
-  filter: invert(46%) sepia(95%) saturate(3174%) hue-rotate(204deg)
-    brightness(90%) contrast(98%);
-}
-
 .logo:hover {
   font-size: 25px;
-  width: 140px;
   color: #3781fd;
 }
 
@@ -260,13 +249,14 @@ header > .navbar > div.info > img {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 50%;
+  width: 1400px;
   height: 937px;
   object-fit: cover;
   user-select: none;
   z-index: 0;
 
-  box-shadow: inset 0 0 0 0 #000;
+  background: linear-gradient(to right, #00000000 70%, #FAFAFA 100%), url("./assets/image.jpg");
+
 }
 
 .scroll-incentivizer {
@@ -305,3 +295,73 @@ header > .navbar > div.info > img {
   }
 }
 
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 600px){
+  header {
+    position:sticky;
+    top: 0;
+    z-index: 2;
+    height: 30px;
+    font-size: 9px;
+    background-color: #ffffff;
+  }
+  
+  header > .navbar {
+    display: flex;
+    width: 100vw;
+    max-width: 1920px;
+    margin-inline: auto;
+    background-color: #ffffff;
+    align-content: center;
+    user-select: none;
+  }
+  
+  header > .navbar > div {
+    padding: 0px 8px 0px 8px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  header > .navbar > div:not(.logo):hover {
+    color: #3781fd;
+    box-shadow: inset 0px -2px 0 #3781fd;
+  }
+  
+  header > .navbar > div.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 0px 10px 0px 10px;
+  
+    margin-left: auto;
+  
+    cursor: pointer;
+  }
+
+  header > .navbar > div.info > img {
+    width: 10px;
+  }
+
+  header > .navbar > div.info > img {
+    width: 18px;
+  }
+
+  .logo {
+    width: 90px;
+  
+    font-family: "Dancing Script", cursive;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.5s;
+  }
+  
+  .logo:hover {
+    font-size: 15.2px;
+    color: #3781fd;
+  }
+}

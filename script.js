@@ -9,5 +9,5 @@ window.addEventListener("scroll", (e) => {
   clearTimeout(isScrolling)
   isScrolling = setTimeout(() => {
     document.body.classList.toggle("scroll-active")
-  }, 1000)
+  }, 400)
 })
