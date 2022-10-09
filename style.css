@@ -290,6 +290,16 @@ header > .navbar > div.info {
   cursor: pointer;
 }
 
+footer {
+  height: 13vw;
+  max-height: 250px;
+  width: 100%;
+  background-color: #34363a;
+  border-top: min(0.25vw, 3px) solid #3781fd;
+
+  box-shadow: 0 0 20px 0px #c6c6c6;
+}
+
 @keyframes arrow {
   0% {
     padding-top: 8px;
