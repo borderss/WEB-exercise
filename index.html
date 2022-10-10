@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alberts Liepins Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./public/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,8 @@
 
 <body>
   <div class="hero-image"></div> <!-- HERO SECTION IMAGE -->
-  <div> <!-- WRAPPER DIV FOR SCROLLBAR TRICK -->
+  <div>
+    <!-- WRAPPER DIV FOR SCROLLBAR TRICK -->
     <!-- HEADER SECTION -->
     <header>
       <div class="navbar">
@@ -25,7 +26,7 @@
         <div>About me</div>
         <div>Contact</div>
         <div class="info">
-          <img src="./assets/Vector.svg">
+          <img src="./public/SVG/info.svg">
         </div>
       </div>
     </header>
@@ -33,8 +34,9 @@
 
     <!-- MAIN PAGE CONTENT -->
     <div class="main">
+      <!-- HERO SECTION -->
       <div class="hero">
-        I am a 
+        I am a
         <div class="title-scroller">
           <span>
             <div>web developer</div>
@@ -47,7 +49,7 @@
       <div class="hero-text">
         I enjoy making designs and implementing them to make amazing user experiences.
       </div>
-  
+
       <div class="action-buttons">
         <button class="learn-more">
           Learn more
@@ -56,17 +58,75 @@
           Contact me
         </button>
       </div>
-  
+
       <div class="scroll-incentivizer">
-        <img class="mouse" src="./assets/mouse.svg">
-        <img class="arrow" src="./assets/arrow.svg">
+        <img class="mouse" src="./public/SVG/mouse.svg">
+        <img class="arrow" src="./public/SVG/arrow.svg">
+      </div>
+    </div>
+
+    <!-- INFORMATION CARD SECTION -->
+    <div class="cards">
+      What do is it I do?
+
+      <div class="card-container">
+        <div>
+          <img src="./public/SVG/layout.svg">
+          <p></p>
+        </div>
+        <div>
+          <img src="./public/SVG/news.svg">
+          <p></p>
+        </div>
+        <div>
+          <img src="./public/SVG/code.svg">
+          <p></p>
+        </div>
+        <div>
+          <img src="./public/SVG/apple.svg">
+          <p></p>
+        </div>
+        <div>
+          <img src="./public/SVG/education.svg">
+          <p></p>
+        </div>
+        <div>
+          <img src="./public/SVG/earth.svg">
+          <p></p>
+        </div>
       </div>
     </div>
   </div>
 
   <footer>
-    
+    <div id="temp" class="icon-bar">
+      <a href="#"><img class="twitter" src="./public/SVG/twitter.svg"></a>
+
+      <a href="#"><img class="seperator" src="./public/SVG/seperator.svg"></a>
+
+      <a href="#"><img class="linkedin" src="./public/SVG/linkedin.svg"></a>
+
+      <a href="#"><img class="seperator" src="./public/SVG/seperator.svg"></a>
+
+      <a href="#"><img class="gmail" src="./public/SVG/gmail.svg"></a>
+
+      <a href="#"><img class="seperator" src="./public/SVG/seperator.svg"></a>
+
+      <a href="#"><img class="facebook" src="./public/SVG/facebook.svg"></a>
+
+      <a href="#"><img class="seperator" src="./public/SVG/seperator.svg"></a>
+
+      <a href="#"><img class="discord" src="./public/SVG/discord.svg"></a>
+    </div>
+
+    <div class="related-info">
+      <a href="#">About me</a>
+      <a href="#" class="logo">Alberts Liepiņš</a>
+      <a href="#">Contact</a>
+    </div>
+
   </footer>
 </body>
-<script src="./script.js"></script>
+<script src="./public/script.js"></script>
+
 </html>

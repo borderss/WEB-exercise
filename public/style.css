@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-  position:sticky;
+  position: sticky;
   top: 0;
   z-index: 2;
   height: 50px;
@@ -106,14 +106,17 @@ header > .navbar > div.info {
   color: #3781fd;
 }
 
-.info:hover > img{
-  filter: brightness(0) invert(38%) sepia(56%) saturate(1439%) hue-rotate(195deg) brightness(105%) contrast(99%);
+.info:hover > img {
+  filter: brightness(0) invert(38%) sepia(56%) saturate(1439%)
+    hue-rotate(195deg) brightness(105%) contrast(99%);
 }
 
 .main {
   min-width: 850px;
   max-width: 1800px;
   width: 88%;
+  height: 100vh;
+  max-height: 677px;
   margin: 210px auto 0px auto;
 }
 
@@ -262,7 +265,8 @@ header > .navbar > div.info {
   height: 100vh;
   max-height: 937px;
 
-  background: linear-gradient(to right, #00000000 50%, #FAFAFA 100%), url("./assets/image.jpg") center;
+  background: linear-gradient(to right, #00000000 50%, #fafafa 100%),
+    url("./images/hero.jpg") center;
   transition: 0.5s;
 }
 
@@ -277,7 +281,7 @@ header > .navbar > div.info {
 
 .scroll-incentivizer > .mouse {
   width: 30px;
-  margin-right: 124px;
+  margin-right: 144px;
   animation: arrow 2s ease infinite;
   cursor: pointer;
 }
@@ -285,20 +289,134 @@ header > .navbar > div.info {
 .scroll-incentivizer > .arrow {
   padding-top: 8px;
   width: 25px;
-  margin-right: 123px;
+  margin-right: 143px;
   animation: arrow 2s ease infinite;
   cursor: pointer;
 }
 
 footer {
-  height: 13vw;
-  max-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  height: fit-content;
+  min-height: 170px;
   width: 100%;
   background-color: #34363a;
   border-top: min(0.25vw, 3px) solid #3781fd;
 
   box-shadow: 0 0 20px 0px #c6c6c6;
 }
+
+.icon-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+
+  gap: min(30px, 2%);
+
+  transform-origin: top center;
+}
+
+.icon-bar > a > img:not(.seperator) {
+  height: 34px;
+  padding: 25px;
+
+  filter: contrast(0);
+
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.icon-bar > a > img:not(.seperator):hover {
+  margin-inline: 30px;
+  filter: contrast(1);
+}
+
+.icon-bar > a > img.seperator {
+  height: 52px;
+}
+
+.related-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 10px;
+  height: 46px;
+
+  gap: 35px;
+}
+
+.related-info > a {
+  transition: 0.2s;
+  height: 100%;
+  line-height: 46px;
+}
+
+.related-info > a.logo {
+  width: fit-content;
+  font-size: 27px;
+  transition: 0.2s;
+}
+
+.related-info > a.logo:hover {
+  font-size: 30px;
+  color: #3781fd;
+}
+
+
+.related-info > a:not(.logo):hover {
+  font-size: 16px;
+  color: #3781fd;
+
+  border-bottom: 2px solid red inset;
+}
+
+.related-info > a:link {
+  text-decoration: none;
+}
+
+.related-info > a:visited {
+  color: #7F7F7F;
+}
+
+.cards {
+  width: 76%;
+  max-width: 1800px;
+  margin: 0px auto 0px auto;
+  margin-top: min(220px, 12vh);
+  font-size: 50px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+}
+
+.card-container > div {
+  width: 420px;
+  aspect-ratio: 1.15;
+  background-color: white;
+  box-shadow: 0 0 20px #e4e4e4;
+  border-radius: 10px;
+}
+
+.card-container > div > img {
+  width: 230px;
+  transform: translate(130px, 80px);
+}
+
+
 
 @keyframes arrow {
   0% {
@@ -312,7 +430,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1650px){
+@media only screen and (max-width: 1650px) {
   .main {
     width: 200px;
     margin: 20vh auto 0px 5vw;
@@ -320,7 +438,7 @@ footer {
   }
 
   .hero-image {
-    background-position: -147px -86px;
+    left: max(570px, 57%);
   }
 
   .scroll-incentivizer {
@@ -329,10 +447,25 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1280px) {
   .main {
     margin: 20vh auto 0px 5vw;
     transform: scale(70%);
+  }
+
+  .hero-image {
+    left: max(570px, 57%);
+  }
+
+  .scroll-incentivizer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main {
+    margin: 20vh auto 0px 5vw;
+    transform: scale(45%);
   }
 
   .hero-image {
@@ -345,22 +478,11 @@ footer {
     background-size: cover;
 
     background-size: 150%;
-    background-position: -214px -111px;
-  }
-
-  .scroll-incentivizer {
-    display: none;
+    background-position: -124px -61px;
   }
 }
 
-@media only screen and (max-width: 800px){
-  .main {
-    margin: 20vh auto 0px 5vw;
-    transform: scale(40%);
-  }
-}
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   header {
     height: 30px;
     font-size: 9px;
@@ -370,14 +492,14 @@ footer {
     padding: 0px 8px 0px 8px;
     line-height: 30px;
   }
-  
+
   header > .navbar > div.info {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0px 10px 0px 10px;
     margin-left: auto;
-    
+
     cursor: pointer;
   }
 
@@ -391,13 +513,13 @@ footer {
 
   .logo {
     width: 90px;
-  
+
     font-family: "Dancing Script", cursive;
     font-size: 15px;
     text-align: center;
     transition: 0.5s;
   }
-  
+
   .logo:hover {
     font-size: 15.2px;
     color: #3781fd;
@@ -416,6 +538,8 @@ footer {
     height: 100vh;
 
     background-size: cover;
+
+    background-repeat: no-repeat;
 
     background-size: 150%;
     background-position: -124px -61px;

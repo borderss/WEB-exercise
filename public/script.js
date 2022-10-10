@@ -1,4 +1,5 @@
 // Scrollbar handling
+
 var isScrolling
 
 window.addEventListener("scroll", (e) => {
