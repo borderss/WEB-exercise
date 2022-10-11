@@ -25,6 +25,7 @@ body {
 body > div {
   background: #fafafa;
   height: 100%;
+  z-index: -5;
 }
 
 ::selection {
@@ -57,6 +58,8 @@ header {
   height: 50px;
   background-color: #ffffff;
 }
+
+
 
 header > .navbar {
   display: flex;
@@ -263,11 +266,13 @@ header > .navbar > div.info {
   left: 50%;
   width: 1400px;
   height: 100vh;
-  max-height: 937px;
+  max-height: min(1000px, 100vh);
 
   background: linear-gradient(to right, #00000000 50%, #fafafa 100%),
     url("./images/hero.jpg") center;
   transition: 0.5s;
+
+  z-index: 0;
 }
 
 .scroll-incentivizer {
@@ -386,7 +391,7 @@ footer {
 
 .cards {
   width: 76%;
-  max-width: 1800px;
+  max-width: 1600px;
   margin: 0px auto 0px auto;
   margin-top: min(220px, 12vh);
   font-size: 50px;
@@ -396,7 +401,9 @@ footer {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: max(500px, 85%);
+  font-size: 26px;
+  margin-inline: auto;
   margin-top: 50px;
   justify-content: center;
   gap: 60px;
@@ -404,18 +411,40 @@ footer {
 }
 
 .card-container > div {
-  width: 420px;
-  aspect-ratio: 1.15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 250px;
+  height: 220px;
+  padding: 50px;
   background-color: white;
   box-shadow: 0 0 20px #e4e4e4;
-  border-radius: 10px;
+  border-radius: 15px;
+
+  transition: box-shadow 0.5s;
 }
 
 .card-container > div > img {
-  width: 230px;
-  transform: translate(130px, 80px);
+  height: 81px;
+  filter: brightness(0.35);
 }
 
+.card-container > div > p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  width: calc(100% + 55px);
+}
+
+.card-container > div:hover {
+  box-shadow: 
+    20px 0 40px #c6f2ffdd,
+    0px 0 40px #ffcdebdd,
+    0px 20px 30px #c4deffdd;
+}
 
 
 @keyframes arrow {
