@@ -394,7 +394,7 @@ footer {
   max-width: 1600px;
   margin: 0px auto 0px auto;
   margin-top: min(220px, 12vh);
-  font-size: 50px;
+  font-size: 43px;
 }
 
 
@@ -406,7 +406,7 @@ footer {
   margin-inline: auto;
   margin-top: 50px;
   justify-content: center;
-  gap: 60px;
+  gap: 70px;
   text-align: center;
 }
 
@@ -415,37 +415,56 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  width: 345px;
+  height: 387px;
+  /* padding: 50px; */
+  background-color: rgba(255, 0, 0, 0);
 
-  width: 250px;
-  height: 220px;
-  padding: 50px;
-  background-color: white;
-  box-shadow: 0 0 20px #e4e4e4;
+  border-radius: 19px;
+  transition: box-shadow 0.5s;
+}
+
+.card-container > div::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+
+  top: 4px;
+
+  background-color: rgb(255, 255, 255);
   border-radius: 15px;
-
   transition: box-shadow 0.5s;
 }
 
 .card-container > div > img {
-  height: 81px;
-  filter: brightness(0.35);
+  z-index: 2;
+  margin-top: 54px;
+  height: 95px;
 }
 
-.card-container > div > p {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.card-container > div > h4 {
+  z-index: 2;
+  margin: 0px;
+  margin-top: 51px;
+}
 
-  width: calc(100% + 55px);
+
+.card-container > div > p {
+  z-index: 2;
+  margin-top: 14px;
+  padding-inline: 20px;
+  font-size: 25px;
 }
 
 .card-container > div:hover {
   box-shadow: 
-    20px 0 40px #c6f2ffdd,
-    0px 0 40px #ffcdebdd,
-    0px 20px 30px #c4deffdd;
+    20px 0 40px #c6f2ff63,
+    0px 0 40px #ffcdeb63,
+    0px 20px 30px #c4deff63;
 }
-
 
 @keyframes arrow {
   0% {
