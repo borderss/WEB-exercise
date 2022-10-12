@@ -411,6 +411,7 @@ footer {
 }
 
 .card-container > div {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -425,18 +426,35 @@ footer {
   transition: box-shadow 0.5s;
 }
 
-.card-container > div::after {
+.card-container > div::after { /* WHITE FIELD IN FRONT OF THE CARD */
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+
+  top: 2px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  transition: box-shadow 0.5s;
+}
+
+.card-container > div::before { /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
   content: "";
   position: absolute;
   z-index: 0;
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
+  width: 200%;
+  aspect-ratio: 0.85;
+  transform: translateY(70%);
 
-  top: 4px;
+  background: conic-gradient(from 90deg at 50% 50%, #3781FD 60%, transparent 60%, transparent 90%, #3781FD 90%), linear-gradient(transparent 35%, #3781FD 35%);
 
-  background-color: rgb(255, 255, 255);
-  border-radius: 15px;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, transform 1s;
+}
+
+.card-container > div:hover::before { /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
+  transform: translateY(-45%);
 }
 
 .card-container > div > img {
