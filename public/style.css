@@ -408,6 +408,9 @@ footer {
   justify-content: center;
   gap: 70px;
   text-align: center;
+
+  scale: 0.8;
+  transform-origin: top;
 }
 
 .card-container > div {
@@ -436,7 +439,7 @@ footer {
   top: 2px;
 
   background-color: rgb(255, 255, 255);
-  border-radius: 16px;
+  border-radius: 18px;
   transition: box-shadow 0.5s;
 }
 
@@ -444,31 +447,43 @@ footer {
   content: "";
   position: absolute;
   z-index: 0;
-  width: 200%;
-  aspect-ratio: 0.85;
-  transform: translateY(70%);
-
-  background: conic-gradient(from 90deg at 50% 50%, #3781FD 60%, transparent 60%, transparent 90%, #3781FD 90%), linear-gradient(transparent 35%, #3781FD 35%);
-
+  width: 110%;
+  height: 1000px;
+  /* aspect-ratio: 0.85; */
+  transform: translateY(5%);
+  filter: blur(20px);
+  background: conic-gradient(from 90deg at 50% 50%, #3781FD 60%, transparent 60%, transparent 90%, #3781FD 90%);
   transition: box-shadow 0.5s, transform 1s;
 }
 
 .card-container > div:hover::before { /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
-  transform: translateY(-45%);
+  transform: translateY(-55%);
 }
 
 .card-container > div > img {
   z-index: 2;
   margin-top: 54px;
   height: 95px;
+
+  transition: margin-top 0.2s, height 0.2s;
+}
+
+.card-container > div:hover > img {
+  margin-top: 48px;
+  height: 107px;
 }
 
 .card-container > div > h4 {
   z-index: 2;
   margin: 0px;
   margin-top: 51px;
+
+  transition: margin-top 0.2s
 }
 
+.card-container > div:hover > h4 {
+  margin-top: 42px;
+}
 
 .card-container > div > p {
   z-index: 2;
