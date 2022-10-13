@@ -59,8 +59,6 @@ header {
   background-color: #ffffff;
 }
 
-
-
 header > .navbar {
   display: flex;
   width: 100vw;
@@ -373,7 +371,6 @@ footer {
   color: #3781fd;
 }
 
-
 .related-info > a:not(.logo):hover {
   font-size: 16px;
   color: #3781fd;
@@ -386,17 +383,37 @@ footer {
 }
 
 .related-info > a:visited {
-  color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 .cards {
-  width: 76%;
-  max-width: 1600px;
-  margin: 0px auto 0px auto;
-  margin-top: min(220px, 12vh);
-  font-size: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 84%;
+  max-width: 1790px;
+  margin: min(187px, 12vh) auto 0px;
+  font-size: 35px;
 }
 
+.cards > span::before {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 4px;
+  transform: translate(-5px, 52px);
+  background: #3781fd;
+  transition: 0.2s;
+}
+
+.cards > span:hover::before {
+  position: absolute;
+  content: "";
+  width: 245px;
+  height: 4px;
+  transform: translate(-5px, 52px);
+  background: #3781fd;
+}
 
 .card-container {
   display: flex;
@@ -429,7 +446,8 @@ footer {
   transition: box-shadow 0.5s;
 }
 
-.card-container > div::after { /* WHITE FIELD IN FRONT OF THE CARD */
+.card-container > div::after {
+  /* WHITE FIELD IN FRONT OF THE CARD */
   content: "";
   position: absolute;
   z-index: 1;
@@ -443,20 +461,27 @@ footer {
   transition: box-shadow 0.5s;
 }
 
-.card-container > div::before { /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
+.card-container > div::before {
+  /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
   content: "";
   position: absolute;
   z-index: 0;
   width: 110%;
   height: 1000px;
-  /* aspect-ratio: 0.85; */
   transform: translateY(5%);
   filter: blur(20px);
-  background: conic-gradient(from 90deg at 50% 50%, #3781FD 60%, transparent 60%, transparent 90%, #3781FD 90%);
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #3781fd 60%,
+    transparent 60%,
+    transparent 90%,
+    #3781fd 90%
+  );
   transition: box-shadow 0.5s, transform 1s;
 }
 
-.card-container > div:hover::before { /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
+.card-container > div:hover::before {
+  /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
   transform: translateY(-55%);
 }
 
@@ -478,7 +503,7 @@ footer {
   margin: 0px;
   margin-top: 51px;
 
-  transition: margin-top 0.2s
+  transition: margin-top 0.2s;
 }
 
 .card-container > div:hover > h4 {
@@ -493,9 +518,7 @@ footer {
 }
 
 .card-container > div:hover {
-  box-shadow: 
-    20px 0 40px #c6f2ff63,
-    0px 0 40px #ffcdeb63,
+  box-shadow: 20px 0 40px #c6f2ff63, 0px 0 40px #ffcdeb63,
     0px 20px 30px #c4deff63;
 }
 
