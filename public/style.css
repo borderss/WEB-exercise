@@ -396,23 +396,26 @@ footer {
   font-size: 35px;
 }
 
-.cards > span::before {
+.TitleText{
+  transition: 0.2s;
+}
+
+.TitleText::before {
   position: absolute;
   content: "";
   width: 0px;
-  height: 4px;
+  height: 2px;
   transform: translate(-5px, 52px);
   background: #3781fd;
   transition: 0.2s;
 }
 
-.cards > span:hover::before {
-  position: absolute;
-  content: "";
+.TitleText:hover{
+  transform: skewX(-5deg);
+}
+
+.TitleText:hover::before {
   width: 245px;
-  height: 4px;
-  transform: translate(-5px, 52px);
-  background: #3781fd;
 }
 
 .card-container {
@@ -520,6 +523,60 @@ footer {
 .card-container > div:hover {
   box-shadow: 20px 0 40px #c6f2ff63, 0px 0 40px #ffcdeb63,
     0px 20px 30px #c4deff63;
+}
+
+.quote {
+  display: flex;
+  background-color: #f5f5f5;
+  height: 320px;
+  width: auto;
+  padding: 35px 0 20px 0;
+  font-family: 'Bad Script';
+  line-height: 65px;
+  font-size: 37px;
+  margin: 0px auto 50px auto;
+
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-container {
+  transform-origin: 50% 50%;
+  user-select: none;
+  pointer-events: none;
+}
+
+#quote-container > p {
+  transform-origin: 50% 50%;
+
+  margin: 0px;
+  z-index: 1;
+
+  transition: 0.5s;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+.quote:hover > #quote-container > p{
+  scale: 1.05;
+}
+
+.author {
+  color: #7f7f7f;
+  font-size: 25px;
+}
+
+.quotation-mark {
+  color:#3781fd;
+  font-size: 45px;
+}
+
+.full-bleed {
+  box-shadow: 0 0 0 100vw #f5f5f5;
+  clip-path: inset(0 -100vw);
 }
 
 @keyframes arrow {
