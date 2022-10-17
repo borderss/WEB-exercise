@@ -527,7 +527,9 @@ footer {
 
 .quote {
   display: flex;
-  background-color: #f5f5f5;
+  background: white;
+  box-shadow: 0px 0px 30px 0px #fbfbfb;
+
   height: 320px;
   width: auto;
   padding: 35px 0 20px 0;
@@ -546,6 +548,8 @@ footer {
   transform-origin: 50% 50%;
   user-select: none;
   pointer-events: none;
+
+  filter: drop-shadow(0px 23px 71px black);
 }
 
 #quote-container > p {
@@ -572,11 +576,6 @@ footer {
 .quotation-mark {
   color:#3781fd;
   font-size: 45px;
-}
-
-.full-bleed {
-  box-shadow: 0 0 0 100vw #f5f5f5;
-  clip-path: inset(0 -100vw);
 }
 
 @keyframes arrow {
