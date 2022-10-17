@@ -350,11 +350,11 @@ footer {
 
   padding-top: 10px;
   height: 46px;
-
   gap: 35px;
 }
 
 .related-info > a {
+  color: #6a6a6a;
   transition: 0.2s;
   height: 100%;
   line-height: 46px;
@@ -372,7 +372,8 @@ footer {
 }
 
 .related-info > a:not(.logo):hover {
-  font-size: 16px;
+  padding-inline: 5px;
+  font-size: 18px;
   color: #3781fd;
 
   border-bottom: 2px solid red inset;
@@ -421,9 +422,8 @@ footer {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  width: max(500px, 85%);
+  width: min(1175px, 95vw);
   font-size: 26px;
-  margin-inline: auto;
   margin-top: 50px;
   justify-content: center;
   gap: 70px;
