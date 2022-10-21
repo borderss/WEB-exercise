@@ -579,10 +579,9 @@ footer {
 }
 
 .about-me{
-  width: min(1150px, 95vw);
+  width: min(1100px, 95vw);
   height: fit-content;
-  margin-inline: auto;
-  margin-block: 50px;
+  margin: ;
 }
 
 .about-me > span {
