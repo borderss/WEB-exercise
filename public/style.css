@@ -1,3 +1,8 @@
+:root {
+  --accent: #3781fd;
+  --text: #4a4a4a;
+}
+
 html,
 body {
   margin: 0px;
@@ -48,7 +53,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .scroll-active {
-  background-color: #3781fd;
+  background-color: var(--accent);
 }
 
 header {
@@ -77,8 +82,8 @@ header > .navbar > div {
 }
 
 header > .navbar > div:not(.logo):hover {
-  color: #3781fd;
-  box-shadow: inset 0px -2px 0 #3781fd;
+  color: var(--accent);
+  box-shadow: inset 0px -2px 0 var(--accent);
 }
 
 header > .navbar > div.info {
@@ -104,7 +109,7 @@ header > .navbar > div.info {
 
 .logo:hover {
   font-size: 25px;
-  color: #3781fd;
+  color: var(--accent);
 }
 
 .info:hover > img {
@@ -206,7 +211,7 @@ header > .navbar > div.info {
 
 .action-buttons > button {
   border: none;
-  background: #3781fd;
+  background: var(--accent);
   border-radius: 5px;
 
   height: 100%;
@@ -224,7 +229,7 @@ header > .navbar > div.info {
 }
 
 .action-buttons > button.learn-more:hover {
-  box-shadow: 0px 2px 10px 0px #3781fd;
+  box-shadow: 0px 2px 10px 0px var(--accent);
   padding-left: 10px;
 }
 
@@ -232,12 +237,12 @@ header > .navbar > div.info {
   position: relative;
   background: transparent;
   font-weight: 500;
-  color: #3781fd;
+  color: var(--accent);
   transition: 0.2s;
 }
 
 .action-buttons > button.contact:hover::before {
-  filter: drop-shadow(0px 2px 4px #3781fd);
+  filter: drop-shadow(0px 2px 4px var(--accent));
 }
 
 .action-buttons > button.contact:hover {
@@ -253,7 +258,7 @@ header > .navbar > div.info {
   right: 0;
 
   border-radius: inherit;
-  border: 2px solid #3781fd;
+  border: 2px solid var(--accent);
 
   transition: 0.2s;
 }
@@ -306,7 +311,7 @@ footer {
   min-height: 170px;
   width: 100%;
   background-color: #34363a;
-  border-top: min(0.25vw, 3px) solid #3781fd;
+  border-top: min(0.25vw, 3px) solid var(--accent);
 
   box-shadow: 0 0 20px 0px #c6c6c6;
 }
@@ -368,13 +373,13 @@ footer {
 
 .related-info > a.logo:hover {
   font-size: 30px;
-  color: #3781fd;
+  color: var(--accent);
 }
 
 .related-info > a:not(.logo):hover {
   padding-inline: 5px;
   font-size: 18px;
-  color: #3781fd;
+  color: var(--accent);
 
   border-bottom: 2px solid red inset;
 }
@@ -397,7 +402,7 @@ footer {
   font-size: 35px;
 }
 
-.TitleText{
+.TitleText {
   transition: 0.2s;
 }
 
@@ -407,11 +412,11 @@ footer {
   width: 0px;
   height: 2px;
   transform: translate(-5px, 52px);
-  background: #3781fd;
+  background: var(--accent);
   transition: 0.2s;
 }
 
-.TitleText:hover{
+.TitleText:hover {
   transform: skewX(-5deg);
 }
 
@@ -475,10 +480,10 @@ footer {
   filter: blur(20px);
   background: conic-gradient(
     from 90deg at 50% 50%,
-    #3781fd 60%,
+    var(--accent) 60%,
     transparent 60%,
     transparent 90%,
-    #3781fd 90%
+    var(--accent) 90%
   );
   transition: box-shadow 0.5s, transform 1s;
 }
@@ -533,7 +538,7 @@ footer {
   height: 320px;
   width: auto;
   padding: 35px 0 20px 0;
-  font-family: 'Bad Script';
+  font-family: "Bad Script";
   line-height: 65px;
   font-size: 37px;
   margin: 0px auto 50px auto;
@@ -564,7 +569,7 @@ footer {
   pointer-events: none;
 }
 
-.quote:hover > #quote-container > p{
+.quote:hover > #quote-container > p {
   scale: 1.05;
 }
 
@@ -574,26 +579,43 @@ footer {
 }
 
 .quotation-mark {
-  color:#3781fd;
+  color: var(--accent);
   font-size: 45px;
 }
 
-.about-me{
+.text-section {
   width: min(1100px, 95vw);
   height: fit-content;
-  margin: ;
-}
-
-.about-me > span {
+  margin-inline: auto;
+  margin-top: 200px;
   font-size: 30px;
+  margin-block: 190px;
 }
 
-.main-text {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.text-section > .main {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 1000;
   font-size: 40px !important;
-  width: 384px;
-  height: 225px;
+  width: 234px;
+  height: 138px;
+
+  background-image: linear-gradient(60deg, var(--accent) 50%, var(--text) 50%);
+  background-size: 1500px;
+  background-position-x: -800px;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: font-size 1s;
+}
+
+
+.text-section > .desc > span {
+}
+
+.text-section:hover > .main {
+  color: var(--accent);
+  background-position-x: 0px;
 }
 
 
@@ -701,7 +723,7 @@ footer {
 
   .logo:hover {
     font-size: 15.2px;
-    color: #3781fd;
+    color: var(--accent);
   }
 
   .main {
