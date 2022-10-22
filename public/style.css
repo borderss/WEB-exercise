@@ -11,6 +11,7 @@ body {
 }
 
 body {
+  position: relative;
   background-color: transparent;
   transition: background-color 0.5s;
 
@@ -632,14 +633,17 @@ footer {
   letter-spacing: 1px;
 }
 
+.background-path {
+  position: absolute;
+  width: 85%;
+  bottom: 0px;
+  right: 0px;
+}
+
 .contact {
-  display: flex;
-  background-image: url("/public/SVG/path.svg");
-  background-repeat: no-repeat;
-  background-size: 60% 50%;
-  width: 100%;
-  height: -webkit-fill-available;
-  height: fit-content;
+  width: min(1100px, 95vw);
+  height: 904px;
+  margin-inline: auto;
 }
 
 @keyframes arrow {
