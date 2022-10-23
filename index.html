@@ -26,19 +26,19 @@
     <!-- HEADER SECTION -->
     <header>
       <div class="navbar">
-        <div class="logo">Alberts Liepiņš</div>
-        <div>Home</div>
-        <div>About me</div>
-        <div>Contact</div>
-        <div class="info">
+        <a href="#" class="logo">Alberts Liepiņš</a>
+        <a href="#">Home</a>
+        <a href="#about-me">About me</a>
+        <a href="#contact">Contact</a>
+        <a class="info">
           <img src="./public/SVG/info.svg">
-        </div>
+        </a>
       </div>
     </header>
 
 
     <!-- MAIN PAGE CONTENT -->
-    <div class="main">
+    <div id="home"  class="main">
       <!-- HERO SECTION -->
       <div class="hero">
         I am a
@@ -56,10 +56,10 @@
       </div>
 
       <div class="action-buttons">
-        <button class="learn-more">
+        <button class="learn-more" onclick="location.href='#cards'" type="button">
           Learn more
         </button>
-        <button class="contact-btn">
+        <button class="contact-btn" onclick="location.href='#contact'" type="button">
           Contact me
         </button>
       </div>
@@ -71,7 +71,7 @@
     </div>
 
     <!-- INFORMATION CARD SECTION -->
-    <div class="cards">
+    <div id="cards" class="cards">
       <span class="TitleText">What is it I do?</span>
 
       <div class="card-container">
@@ -117,7 +117,14 @@
     </div>
 
     <!-- ABOUT ME SECTION -->
-    <div class="text-section">
+    <div id="about-me" class="text-section">
+      <div>
+        <span class="main">
+          I'M ALBERTS LIEPINS
+        </span>
+        <span class="desc">, I'm studying to become a <span>programming technician</span> and<br> I specialize in <span>Front-end</span> <span>design</span> and <span>development</span>. I use the basic <span>CSS</span>, <span>HTML</span> and <span>JS</span> as<br>well as frameworks and pre-processors such as <span>React</span> and <span>SCSS</span></span>  
+      </div>
+
       <div>
         <span class="main">
           EFFICIENT DESIGN AND CODE
@@ -133,12 +140,12 @@
       </div>
     </div>
 
-    <!-- cONTACT SECTION -->
-    <div class="contact">
+    <!-- CONTACT SECTION -->
+    <div id="contact" class="contact">
       <div>
         <h1>Contact me</h1>
         <p>Let's talk about what you need and what I can do to help you achieve your goals.</p>
-        <p class="preff">My preffered communication channels:</p>
+        <p class="preff">| My preffered communication channels</p>
         <div class="contact-channels">
           <div>
             <img src="./public/SVG/discord.svg">
@@ -152,10 +159,24 @@
       </div>
       
 
-      <div class="form">
-        <h3>Send an email</h3>
-        <input type="email">
-      </div>
+      <form class="form" action="" method="post">
+        <h1>Send an email</h1>
+        <div class="name-surname">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Surname">
+        </div>
+        <div>
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Subject">
+        </div>
+        <textarea placeholder="Your message"></textarea>
+        <div class="checkbox-field">
+          <input type="checkbox" id="job">
+          <label for="job">Related to a job opportunity?</label>
+        </div>
+        <br>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
 

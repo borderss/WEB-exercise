@@ -8,6 +8,7 @@ body {
   margin: 0px;
   border: 0px;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   background-color: transparent;
   transition: background-color 0.5s;
 
-  height: 4000px;
+  height: 4150px;
 
   font-family: "Noto Sans", sans-serif;
   color: #4a4a4a;
@@ -76,19 +77,21 @@ header > .navbar {
   user-select: none;
 }
 
-header > .navbar > div {
+header > .navbar > a {
+  color: var(--text);
+  text-decoration: none;
   padding: 0px 20px 0px 20px;
   line-height: 50px;
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s;
 }
 
-header > .navbar > div:not(.logo):hover {
+header > .navbar > a:not(.logo):hover {
   color: var(--accent);
   box-shadow: inset 0px -2px 0 var(--accent);
 }
 
-header > .navbar > div.info {
+header > .navbar > a.info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,6 +398,8 @@ footer {
 }
 
 .cards {
+  padding-top: 80px;
+  margin-top: -80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -586,20 +591,23 @@ footer {
 }
 
 .text-section {
-  width: min(1100px, 95vw);
+  padding-top: 60px;
+  margin-top: -60px;
   transform-origin: 50% 0%;
   transform: scale(0.85);
   height: fit-content;
   margin-inline: auto;
   font-size: 30px;
-  margin-top: 160px;
+  margin-top: 60px;
   margin-bottom: 100px;
-
-
 }
 
 .text-section > div{
+  width: max(25vw, 1250px);
+  margin-inline: auto;
   margin-top: 100px;
+  padding-block: 30px;
+  background: linear-gradient(90deg, #ffffff00, #fff, #fff, #ffffff00);
 }
 
 .text-section > div > .main {
@@ -641,6 +649,7 @@ footer {
 .background-path {
   position: absolute;
   width: 85%;
+  max-width: 1500px;
   bottom: 0px;
   right: 0px;
   user-select: none;
@@ -658,27 +667,6 @@ footer {
   justify-content: space-around;
 }
 
-.contact > h1 {
-  font-size: 45px;
-  background-image: linear-gradient(60deg, var(--accent) 50%, var(--text) 50%);
-  background-size: 1500px;
-  background-position-x: -800px;
-  z-index: 1;
-
-
-  background-clip: initial;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  transition: 1s, letter-spacing 0.3s;
-}
-
-.contact:hover > h1 {
-  color: var(--accent);
-  background-position-x: 0px;
-  letter-spacing: 1px;
-}
-
 .contact > p {
   font-size: 30px;
 }
@@ -687,6 +675,7 @@ footer {
   background-image: linear-gradient(60deg, var(--accent) 50%, var(--text) 50%);
   background-size: 600px;
   background-position-x: -350px;
+  font-size: 45px;
 
   background-clip: initial;
   -webkit-background-clip: text;
@@ -702,16 +691,115 @@ footer {
 }
 
 .form {
-  min-width: 350px;
-  height: 550px;
+  min-width: 320px;
+  height: 460px;
   background-color: white;
   box-shadow: 0px 10px 20px 0px #e5e5e5;
   border-radius: 12px;
-  padding: 40px;
+  padding: 35px;
+  transition: 0.3s;
+}
+
+.form:hover {
+  box-shadow: 0px 15px 25px 0px #dadada;
+  transform: translateY(-3px);
 }
 
 .form > * {
   margin: 0px;
+}
+
+.form > h1 {
+  font-size: 25px;
+}
+
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form > .name-surname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form > .name-surname > input{
+  width: 50%;
+}
+
+.form > div > input {
+  background-color: #fdfdfd;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  padding-left: 10px;
+  font-size: 15px;
+  height: 35px;
+  margin-top: 15px;
+
+  outline: none;
+}
+
+.form > textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+
+  background-color: #fdfdfd;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  padding-left: 10px;
+  padding-top: 9px;
+  font-size: 15px;
+  height: 120px;
+  width: 100%;
+  margin-top: 15px;
+  resize: none;
+
+  outline: none;
+}
+
+.form > .checkbox-field {
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.form > .checkbox-field > input {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.form > .checkbox-field > label {
+  font: "Noto Sans";
+  font-size: 18px;
+  position: relative;
+  top: -4px;
+  left: 6px;
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+.form > button {
+  font: "Noto Sans";
+  color: white;
+  font-size: 20px;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+
+  margin-top: 16px;
+  transition: 0.2s;
+}
+
+.form > button:hover {
+  box-shadow: 0 5px 20px 0 #005eff62;
 }
 
 .contact > div > .contact-channels > div {
