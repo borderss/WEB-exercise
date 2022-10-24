@@ -36,3 +36,41 @@ quote.addEventListener('mouseleave', ()=>{
     quote.addEventListener('mousemove', quotePerspectiveHandler)
   }, 500)
 })
+
+document.getElementById("disc").addEventListener("click", () => {
+  navigator.clipboard.writeText("SnowyBall#0001")
+
+  let span = document.getElementById("disc").getElementsByTagName("span")[0]
+  
+  span.innerHTML = "Copied!"
+  span.style.color = "#0c2"
+  setTimeout(() => {
+    span.innerHTML = "SnowyBall#0001"
+    span.style.color = getComputedStyle(document.documentElement).getPropertyValue("--text")
+    span.style.transition = "0.15s"
+
+    span.removeAttribute("style")
+  }, 500);
+})
+
+document.getElementById("email").addEventListener("click", () => {
+  console.log("DAUNIS")
+
+})
+
+document.getElementById("email").addEventListener("click", () => {
+  navigator.clipboard.writeText("liepins01@gmail.com")
+  window.location = "mailto: liepins01@gmail.com"
+
+  let span = document.getElementById("email").getElementsByTagName("span")[0]
+  
+  span.innerHTML = "Redirecting!"
+  span.style.color = "#0c2"
+  setTimeout(() => {
+    span.innerHTML = "liepins01@gmail.com"
+    span.style.color = getComputedStyle(document.documentElement).getPropertyValue("--text")
+    span.style.transition = "0.15s"
+    
+    span.removeAttribute("style")
+  }, 500);
+})

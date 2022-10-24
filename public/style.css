@@ -1,6 +1,7 @@
 :root {
   --accent: #3781fd;
   --text: #4a4a4a;
+  --textlight: #777777
 }
 
 html,
@@ -841,7 +842,8 @@ footer {
   margin-left: 10px;
 }
 
-.contact-channels > .disc > span{
+.contact-channels > #disc > span{
+  color: var(--textlight);
   margin-block: auto;
   height: 27px;
   margin-left: -50px;
@@ -850,12 +852,13 @@ footer {
   transition: 0.5s;
 }
 
-.contact-channels > .disc:hover > span{
-  margin-left: 5px;
+.contact-channels > #disc:hover > span{
+  margin-left: 10px;
   filter: opacity(1);
 }
 
-.contact-channels > .email > span{
+.contact-channels > #email > span{
+  color: var(--textlight);
   margin-block: auto;
   height: 27px;
   margin-left: -50px;
@@ -864,8 +867,8 @@ footer {
   transition: 0.5s;
 }
 
-.contact-channels > .email:hover > span{
-  margin-left: 5px;
+.contact-channels > #email:hover > span{
+  margin-left: 10px;
   filter: opacity(1);
 }
 
