@@ -344,6 +344,10 @@ footer {
   transition: 0.5s;
 }
 
+.icon-bar > a > .github {
+  height: 42px !important;
+}
+
 .icon-bar > a > img:not(.seperator):hover {
   margin-inline: 30px;
   filter: contrast(1);
@@ -807,6 +811,7 @@ footer {
   gap: 10px;
   font-size: 20px;
   padding-left: 15px;
+  cursor: pointer;
 }
 
 .contact > div > p{
@@ -834,6 +839,34 @@ footer {
 
 .contact-channels > div:hover {
   margin-left: 10px;
+}
+
+.contact-channels > .disc > span{
+  margin-block: auto;
+  height: 27px;
+  margin-left: -50px;
+  user-select: text;
+  filter: opacity(0);
+  transition: 0.5s;
+}
+
+.contact-channels > .disc:hover > span{
+  margin-left: 5px;
+  filter: opacity(1);
+}
+
+.contact-channels > .email > span{
+  margin-block: auto;
+  height: 27px;
+  margin-left: -50px;
+  user-select: text;
+  filter: opacity(0);
+  transition: 0.5s;
+}
+
+.contact-channels > .email:hover > span{
+  margin-left: 5px;
+  filter: opacity(1);
 }
 
 .contact-channels > div > img{
