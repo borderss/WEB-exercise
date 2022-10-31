@@ -1,7 +1,7 @@
 :root {
   --accent: #3781fd;
   --text: #4a4a4a;
-  --textlight: #777777
+  --textlight: #777777;
 }
 
 html,
@@ -607,7 +607,7 @@ footer {
   margin-bottom: 100px;
 }
 
-.text-section > div{
+.text-section > div {
   width: max(25vw, 1250px);
   margin-inline: auto;
   margin-top: 100px;
@@ -686,7 +686,7 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  transition: 1s, letter-spacing 0.3s;
+  transition: 1s, letter-spacing 0.3s !important;
 }
 
 .contact:hover > div > h1 {
@@ -702,7 +702,7 @@ footer {
   box-shadow: 0px 10px 20px 0px #e5e5e5;
   border-radius: 12px;
   padding: 35px;
-  transition: 0.3s;
+  transition: 0.3s !important;
 }
 
 .form:hover {
@@ -718,7 +718,6 @@ footer {
   font-size: 25px;
 }
 
-
 .form > div {
   display: flex;
   flex-direction: column;
@@ -731,7 +730,7 @@ footer {
   gap: 10px;
 }
 
-.form > .name-surname > input{
+.form > .name-surname > input {
   width: 50%;
 }
 
@@ -769,7 +768,6 @@ footer {
   flex-direction: row;
   align-items: center;
 }
-
 
 .form > .checkbox-field > input {
   width: 20px;
@@ -815,67 +813,66 @@ footer {
   cursor: pointer;
 }
 
-.contact > div > p{
+.contact > div > p {
   font-size: 20px;
   margin-block: 9px;
 }
 
-.contact > div > .preff{
+.contact > div > .preff {
   margin-top: 40px;
 }
 
-.contact > div > .contact-channels > div > img{
+.contact > div > .contact-channels > div > img {
   width: 35px;
   margin-top: 1px;
-  
 }
 
 .contact-channels > div > p {
   margin-block: 9px;
 }
 
-.contact-channels > div{
-  transition: 0.5s;
+.contact-channels > div {
+  transition: 0.5s !important;
 }
 
 .contact-channels > div:hover {
   margin-left: 10px;
 }
 
-.contact-channels > #disc > span{
+.contact-channels > #disc > span {
   color: var(--textlight);
   margin-block: auto;
   height: 27px;
   margin-left: -50px;
   user-select: text;
   filter: opacity(0);
-  transition: 0.5s;
+  transition: 0.5s !important;
 }
 
-.contact-channels > #disc:hover > span{
+.contact-channels > #disc:hover > span {
   margin-left: 10px;
   filter: opacity(1);
 }
 
-.contact-channels > #email > span{
+.contact-channels > #email > span {
   color: var(--textlight);
   margin-block: auto;
   height: 27px;
   margin-left: -50px;
   user-select: text;
   filter: opacity(0);
-  transition: 0.5s;
+  transition: 0.5s !important;
 }
 
-.contact-channels > #email:hover > span{
+.contact-channels > #email:hover > span {
   margin-left: 10px;
   filter: opacity(1);
 }
 
-.contact-channels > div > img{
+.contact-channels > div > img {
   filter: contrast(0);
   margin-right: 0px;
-  transition: 0.5s;
+  transition: 0.5s  !important;
 }
 
 .contact-channels > div:hover > img {
@@ -1009,4 +1006,9 @@ footer {
     background-size: 150%;
     background-position: -124px -61px;
   }
+}
+
+.float-in {
+  opacity: 0 !important;
+  transform: translateY(25px) !important
 }

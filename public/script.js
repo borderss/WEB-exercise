@@ -74,3 +74,21 @@ document.getElementById("email").addEventListener("click", () => {
     span.removeAttribute("style")
   }, 500);
 })
+
+var observer = new IntersectionObserver((entries) => {
+  console.log(entries)
+  entries.forEach(e => {
+    if(e.isIntersecting === true){
+      e.target.setAttribute("style", `transition-delay: ${e.target.getAttribute("stagger")} !important; opacity: 1 !important; transform: translateY(0px) !important; transition: opacity 0.75s, transform 0.75s;`)
+      setTimeout(() => {
+        e.target.classList.remove("float-in")
+      }, 750);
+    }
+  })
+  
+})
+
+
+Array.from(document.querySelectorAll(".float-in")).forEach(e => {
+  observer.observe(e)
+})
