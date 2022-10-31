@@ -91,7 +91,6 @@ var observer = new IntersectionObserver((entries) => {
   
 })
 
-
 Array.from(document.querySelectorAll(".float-in")).forEach(e => {
   observer.observe(e)
 })
