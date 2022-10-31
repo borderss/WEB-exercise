@@ -87,8 +87,8 @@ header > .navbar > a {
   transition: background-color 0.2s, box-shadow 0.2s;
 }
 
-header > .navbar > a:not(.logo):hover {
-  color: var(--accent);
+.active-nav-item {
+  color: var(--accent) !important;
   box-shadow: inset 0px -2px 0 var(--accent);
 }
 
