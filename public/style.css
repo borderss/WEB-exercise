@@ -868,7 +868,7 @@ footer {
 .contact-channels > div > img {
   filter: contrast(0);
   margin-right: 0px;
-  transition: 0.5s  !important;
+  transition: 0.5s !important;
 }
 
 .contact-channels > div:hover > img {
@@ -1006,5 +1006,5 @@ footer {
 
 .float-in {
   opacity: 0 !important;
-  transform: translateY(25px) !important
+  transform: translateY(25px) !important;
 }
