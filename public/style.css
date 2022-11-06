@@ -501,7 +501,6 @@ footer {
 }
 
 .card-container > div:hover::before {
-  /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
   transform: translateY(-55%);
 }
 
@@ -545,7 +544,6 @@ footer {
 .quote {
   display: flex;
   background: white;
-  box-shadow: 0px 0px 30px 0px #fbfbfb;
 
   height: 320px;
   width: auto;
@@ -565,8 +563,6 @@ footer {
   transform-origin: 50% 50%;
   user-select: none;
   pointer-events: none;
-
-  filter: drop-shadow(0px 23px 71px black);
 }
 
 #quote-container > p {
