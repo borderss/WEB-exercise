@@ -1,0 +1,87 @@
+:root {
+  --accent: #3781fd;
+  --text: #4a4a4a;
+  --textlight: #777777;
+}
+
+body {
+  background-color: #f5f5f5;
+  min-height: 500px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 8vh;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 11px 0 #e5e5e5;
+}
+
+
+.nav {
+  height: 55px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #ededed solid;
+}
+
+.nav > div {
+  height: 100%;
+  padding-inline: 20px;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--accent) !important;
+  box-shadow: inset 0px -2px 0 var(--accent);
+}
+
+.nav > div {
+  height: 100%;
+  padding-inline: 20px;
+  cursor: pointer;
+}
+
+.content-page {
+  flex: 1 0 auto;
+}
+
+.subject {
+  width: 210px;
+  padding-inline: 10px;
+  border-right: 1px solid #dfdfdf;
+}
+
+.full-name {
+  width: 160px;
+  padding-inline: 10px;
+  border-right: 1px solid #dfdfdf;
+}
+
+.email {
+  width: 250px;
+  padding-inline: 10px;
+  border-right: 1px solid #dfdfdf;
+}
+
+.content {
+  padding-inline: 10px;
+}
+
+thead > tr > td {
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+thead > tr > td:last-child {
+  border-right: none;
+}
