@@ -65,7 +65,7 @@ footer {
   vertical-align: top;
 }
 
-.subject-header{
+.subject-header {
   padding-inline: 10px;
   vertical-align: top;
 }
@@ -123,12 +123,12 @@ td {
   cursor: pointer;
 }
 
-td[type="job-related"]::before{
-  position:absolute;
+td[type="job-related"]::before {
+  position: absolute;
   content: "";
   left: 0;
   top: -1px;
-  bottom:-1px;
+  bottom: -1px;
   width: 3px;
   background-color: rgb(109, 240, 76);
 }
