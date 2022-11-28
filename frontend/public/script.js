@@ -61,7 +61,6 @@ document.getElementById("disc").addEventListener("click", () => {
   }, 500)
 })
 
-
 document.getElementById("email").addEventListener("click", () => {
   navigator.clipboard.writeText("liepins01@gmail.com")
   window.location = "mailto: liepins01@gmail.com"
