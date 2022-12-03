@@ -161,14 +161,14 @@ header > .navbar > a.info {
 }
 
 @keyframes scrolling {
-  0% {top: -0px;}
-  10% {top: -0px;}
-  25% {top: -100px;}
-  35% {top: -100px;}
-  50% {top: -199px;}
-  60% {top: -199px;}
-  75% {top: -299px;}
-  85% {top: -299px;}
+  0% {top: -0px}
+  10% {top: -0px}
+  25% {top: -100px}
+  35% {top: -100px}
+  50% {top: -199px}
+  60% {top: -199px}
+  75% {top: -299px}
+  85% {top: -299px}
 }
 
 .title-scroller > span > div {
