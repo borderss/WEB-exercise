@@ -12,7 +12,7 @@ function clearNavbar() {
 
 Array.from(document.querySelector(".navbar").getElementsByTagName("a")).forEach(
   (e) => {
-    e.addEventListener("click", (_) => {
+    e.addEventListener("click", () => {
       if (
         !e.classList.contains("active-nav-item") &&
         !e.classList.contains("info")
