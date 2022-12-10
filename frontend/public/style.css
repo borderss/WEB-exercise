@@ -320,7 +320,6 @@ footer {
 .icon-bar > a > img:not(.seperator) {
   height: 34px;
   padding: 25px;
-
   filter: contrast(0);
   cursor: pointer;
   transition: 0.5s;
