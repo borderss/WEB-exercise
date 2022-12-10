@@ -96,17 +96,13 @@ header > .navbar > a.info {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0px 10px 0px 10px;
-
   margin-left: auto;
-
   cursor: pointer;
 }
 
 .logo {
   width: 140px;
-
   font-family: "Dancing Script", cursive;
   font-size: 24px;
   text-align: center;
@@ -134,7 +130,6 @@ header > .navbar > a.info {
 
 .hero {
   display: flex;
-
   font-family: Arial, sans-serif;
   font-size: 70px;
   font-weight: 600;
@@ -147,7 +142,6 @@ header > .navbar > a.info {
   width: 600px;
   height: 100px;
   line-height: 100px;
-
   margin-left: 15px;
   overflow: hidden;
 }
@@ -156,7 +150,6 @@ header > .navbar > a.info {
   position: absolute;
   top: 0;
   user-select: none;
-
   animation: scrolling 10s ease infinite;
 }
 
@@ -173,7 +166,6 @@ header > .navbar > a.info {
 
 .title-scroller > span > div {
   display: flex;
-
   background: linear-gradient(177deg, #46daff, #1221fc);
   background-clip: none;
   -webkit-background-clip: text;
@@ -184,7 +176,6 @@ header > .navbar > a.info {
   font-family: Arial, sans-serif;
   width: 550px;
   font-size: 25px;
-
   padding-top: 15px;
   font-weight: 500;
 }
@@ -203,17 +194,13 @@ header > .navbar > a.info {
   border: none;
   background: var(--accent);
   border-radius: 5px;
-
   height: 100%;
   width: 200px;
-
   font-family: "Noto Sans";
   font-weight: 500;
   font-size: 18px;
   text-rendering: optimizeLegibility;
-
   color: white;
-
   transition: box-shadow 0.2s, padding-left 0.2s;
   cursor: pointer;
 }
@@ -246,10 +233,8 @@ header > .navbar > a.info {
   bottom: 0;
   left: 0;
   right: 0;
-
   border-radius: inherit;
   border: 2px solid var(--accent);
-
   transition: 0.2s;
 }
 
@@ -260,10 +245,8 @@ header > .navbar > a.info {
   width: 1400px;
   height: 100vh;
   max-height: min(1000px, 100vh);
-
   background: linear-gradient(to right, #00000000 50%, #fafafa 100%), url("./images/hero.jpg") center;
   transition: 0.5s;
-
   z-index: 0;
 }
 
@@ -295,13 +278,11 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   height: fit-content;
   min-height: 170px;
   width: 100%;
   background-color: #34363a;
   border-top: min(0.25vw, 3px) solid var(--accent);
-
   box-shadow: 0 0 20px 0px #c6c6c6;
 }
 
