@@ -309,11 +309,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-top: 20px;
-
   gap: min(30px, 2%);
-
   transform-origin: top center;
 }
 
