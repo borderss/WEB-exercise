@@ -21,15 +21,7 @@ for (let i = 0; i < fakeInquiryData.length; i++) {
   fullName.classList.add("full-name")
   email.classList.add("email")
   content.classList.add("content")
-  
-  // <tr>
-  //   <td class="subject" type="job-related">Possible job offer</td>
-  //   <td class="full-name">Zigfrīdmans<br />Austenbrooks</td>
-  //   <td class="email">example.email@gmail.com</td>
-  //   <td class="content"><div>ipsum dolor sit amet consectetur adipisicing elit. Recusandae blanditiis autem
-  //     aliquam ad quo ipsum itaque est quidem eligendi earum, dolor id? Aliquam iste at unde omnis nulla quia
-  //     totam!</div></td>
-  // </tr>
+
 
   subject.innerText = fakeInquiryData[i].subject
   fullName.innerHTML = fakeInquiryData[i].fullName
