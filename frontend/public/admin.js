@@ -22,7 +22,6 @@ for (let i = 0; i < fakeInquiryData.length; i++) {
   email.classList.add("email")
   content.classList.add("content")
 
-
   subject.innerText = fakeInquiryData[i].subject
   fullName.innerHTML = fakeInquiryData[i].fullName
   email.innerText = fakeInquiryData[i].email
