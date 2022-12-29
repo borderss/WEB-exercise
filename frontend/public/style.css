@@ -16,12 +16,9 @@ body {
   position: relative;
   background-color: transparent;
   transition: background-color 0.5s;
-
   height: 4150px;
-
   font-family: "Noto Sans", sans-serif;
   color: #4a4a4a;
-
   overflow-x: hidden;
   overflow-y: overlay;
 }
@@ -154,14 +151,30 @@ header > .navbar > a.info {
 }
 
 @keyframes scrolling {
-  0%  {top: -0px}
-  10% {top: -0px}
-  25% {top: -100px}
-  35% {top: -100px}
-  50% {top: -199px}
-  60% {top: -199px}
-  75% {top: -299px}
-  85% {top: -299px}
+  0% {
+    top: -0px;
+  }
+  10% {
+    top: -0px;
+  }
+  25% {
+    top: -100px;
+  }
+  35% {
+    top: -100px;
+  }
+  50% {
+    top: -199px;
+  }
+  60% {
+    top: -199px;
+  }
+  75% {
+    top: -299px;
+  }
+  85% {
+    top: -299px;
+  }
 }
 
 .title-scroller > span > div {
@@ -245,7 +258,8 @@ header > .navbar > a.info {
   width: 1400px;
   height: 100vh;
   max-height: min(1000px, 100vh);
-  background: linear-gradient(to right, #00000000 50%, #fafafa 100%), url("./images/hero.jpg") center;
+  background: linear-gradient(to right, #00000000 50%, #fafafa 100%),
+    url("./images/hero.jpg") center;
   transition: 0.5s;
   z-index: 0;
 }
