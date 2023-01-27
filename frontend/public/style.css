@@ -276,6 +276,7 @@ header > .navbar > a.info {
   width: 30px;
   margin-right: 144px;
   animation: arrow 2s ease infinite;
+  
   cursor: pointer;
 }
 
