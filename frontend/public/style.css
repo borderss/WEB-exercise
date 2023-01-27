@@ -276,7 +276,7 @@ header > .navbar > a.info {
   width: 30px;
   margin-right: 144px;
   animation: arrow 2s ease infinite;
-  
+
   cursor: pointer;
 }
 
@@ -334,7 +334,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding-top: 10px;
   height: 46px;
   gap: 35px;
