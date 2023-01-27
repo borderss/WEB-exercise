@@ -439,16 +439,13 @@ footer {
   z-index: 1;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
-
   top: 2px;
-
   background-color: rgb(255, 255, 255);
   border-radius: 18px;
   transition: box-shadow 0.5s;
 }
 
 .card-container > div::before {
-  /* THE CONTENT BETWEEN THE ACTUAL CONTAINER AND ::after ELEMENT */
   content: "";
   position: absolute;
   z-index: 0;
