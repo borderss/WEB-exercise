@@ -257,9 +257,8 @@ header > .navbar > a.info {
   width: 1400px;
   height: 100vh;
   max-height: min(1000px, 100vh);
-  background: linear-gradient(to right, #00000000 50%, #fafafa 100%),
-    url("./images/hero.jpg") center;
-    
+  background: linear-gradient(to right, #00000000 50%, #fafafa 100%), url("./images/hero.jpg") center;
+
   transition: 0.5s;
   z-index: 0;
 }
