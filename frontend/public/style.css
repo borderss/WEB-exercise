@@ -197,7 +197,6 @@ header > .navbar > a.info {
   display: flex;
   width: auto;
   height: 50px;
-
   margin-top: 30px;
   gap: 17px;
   user-select: none;
